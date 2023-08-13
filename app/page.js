@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 export default function Home() {
    
   const {isLoaded} = useJsApiLoader({
-    googleMapsApiKey:'AIzaSyDUjsbCoQXQQMLeS1V2t37RhkIg5JRftTM',
+    googleMapsApiKey:process.env.NEXT_PUBLIC_REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries:['places']
   })
  
@@ -39,7 +39,7 @@ export default function Home() {
     setDuration('')
    }
   if (!isLoaded) {
-    return <h1>Loading ...</h1>
+    return <h1 className='text-center mt-16 text-4xl'>Loading ...</h1>
   }
   return (
     <main className="flex flex-col-reverse  md:flex-row md:h-[100vh] items-center md:items-start md:justify-between ">
