@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main className="flex flex-col-reverse  md:flex-row md:h-[100vh] items-center md:items-start md:justify-between ">
      <div className='w-1/2 flex flex-col'>
-      <div className='grid grid-cols-2 lg:grid-cols-5 gap-2 items-center text-sm text-center mt-16	mx-8'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-2 items-center text-sm text-center mt-16	mx-8'>
         <div onClick={()=>calculateRoute('İstanbul','Münih')} className='cursor-pointer'>
         <Image src={'/iveco.jpg'} width={400} height={400} alt='iveco' />  
         <p>34AAA001 (İstanbul - Münih)</p>
